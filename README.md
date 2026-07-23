@@ -238,25 +238,7 @@ Visit Portfolio
 
 <br>
 
-<div align="center">
-
-### 💬 Let's Build Something Amazing Together
-
-I'm always interested in collaborating on
-
-✨ Java Full Stack Development
-
-✨ Enterprise Applications
-
-✨ Open Source
-
-✨ AI Projects
-
-✨ Cybersecurity
-
-</div>
-
-# <img src="https://img.icons8.com/fluency/48/visible.png" width="34"/> Profile Visitors
+## <img src="https://img.icons8.com/fluency/48/visible.png" width="34"/> Profile Visitors
 
 <div align="center">
 
@@ -266,7 +248,7 @@ I'm always interested in collaborating on
 
 <div align="center">
 
-# ⭐ Thank You For Visiting ⭐
+## ⭐ Thank You For Visiting ⭐
 
 ### If you like my work, consider supporting it by
 
