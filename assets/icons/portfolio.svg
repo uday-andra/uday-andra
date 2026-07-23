@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+<defs>
+
+<linearGradient id="portfolio">
+
+<stop offset="0%" stop-color="#10B981"/>
+
+<stop offset="100%" stop-color="#22D3EE"/>
+
+</linearGradient>
+
+</defs>
+
+<rect
+x="10"
+y="14"
+width="44"
+height="36"
+rx="8"
+fill="none"
+stroke="url(#portfolio)"
+stroke-width="2"/>
+
+<path
+fill="url(#portfolio)"
+d="M22 22h20v4H22zm0 8h20v4H22zm0 8h14v4H22z"/>
+
+<circle
+cx="46"
+cy="42"
+r="4"
+fill="url(#portfolio)">
+
+<animate
+attributeName="r"
+values="4;5;4"
+dur="2s"
+repeatCount="indefinite"/>
+
+</circle>
+
+</svg>

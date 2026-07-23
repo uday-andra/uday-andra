@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+<defs>
+
+<linearGradient id="mail">
+
+<stop offset="0%" stop-color="#EA4335"/>
+
+<stop offset="100%" stop-color="#22D3EE"/>
+
+</linearGradient>
+
+</defs>
+
+<rect
+x="8"
+y="12"
+width="48"
+height="40"
+rx="8"
+fill="none"
+stroke="url(#mail)"
+stroke-width="2"/>
+
+<path
+fill="url(#mail)"
+d="M10 18l22 18 22-18v6L32 42 10 24z"/>
+
+</svg>

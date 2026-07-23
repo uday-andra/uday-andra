@@ -1,0 +1,335 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1180" y2="610" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="60%" stop-color="#071120"/>
+      <stop offset="100%" stop-color="#02050D"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121C34" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#0B1222" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(740 180) rotate(90) scale(230 290)">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#7C3AED" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 250) rotate(90) scale(250 250)">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.38"/>
+      <stop offset="45%" stop-color="#22D3EE" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glassBlur" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="panelShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#020617" flood-opacity="0.65"/>
+    </filter>
+    <filter id="noiseFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="7" result="n1">
+        <animate attributeName="baseFrequency" dur="10s" values="0.92;1.1;0.92" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix in="n1" type="saturate" values="0" result="n2"/>
+      <feComponentTransfer in="n2" result="n3">
+        <feFuncA type="table" tableValues="0 0.05"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="n3" mode="soft-light"/>
+    </filter>
+    <filter id="borderGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+    </filter>
+    <pattern id="scanlines" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="transparent"/>
+      <rect width="8" height="1.2" fill="url(#scanGrad)" opacity="0.65"/>
+    </pattern>
+    <clipPath id="panelClip">
+      <rect x="74" y="66" width="1032" height="478" rx="28"/>
+    </clipPath>
+    <style>
+      .mono { font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace; }
+      .lcd { font-family: 'Segoe UI', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1180" height="610" fill="url(#bgGrad)"/>
+
+  <rect width="1180" height="610" fill="url(#bgGrad)" filter="url(#noiseFilter)" opacity="0.45"/>
+
+  <g opacity="0.85">
+    <circle cx="250" cy="72" r="130" fill="url(#halo)"/>
+    <circle cx="790" cy="120" r="180" fill="url(#glowGlow)"/>
+    <circle cx="1020" cy="520" r="120" fill="#10B981" opacity="0.08"/>
+  </g>
+
+  <g clip-path="url(#panelClip)">
+    <rect x="74" y="66" width="1032" height="478" rx="28" fill="url(#panelGrad)" stroke="url(#accentGrad)" stroke-opacity="0.35"/>
+    <rect x="74" y="66" width="1032" height="478" rx="28" fill="url(#scanlines)" opacity="0.25"/>
+
+    <g opacity="0.72">
+      <rect x="120" y="102" width="430" height="352" rx="24" fill="#0B1327" opacity="0.8" stroke="#22D3EE" stroke-opacity="0.12"/>
+      <rect x="595" y="110" width="460" height="332" rx="24" fill="#0B1327" opacity="0.7" stroke="#7C3AED" stroke-opacity="0.16"/>
+    </g>
+
+    <g opacity="0.5" filter="url(#glassBlur)">
+      <ellipse cx="345" cy="114" rx="330" ry="80" fill="#22D3EE" opacity="0.08">
+        <animate attributeName="cx" dur="14s" values="345;305;345" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="820" cy="146" rx="270" ry="60" fill="#7C3AED" opacity="0.12">
+        <animate attributeName="cy" dur="11s" values="146;124;146" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <g opacity="0.28">
+      <rect x="96" y="88" width="280" height="9" fill="url(#accentGrad)">
+        <animate attributeName="x" dur="6s" values="96;120;96" repeatCount="indefinite"/>
+      </rect>
+      <rect x="895" y="118" width="170" height="7" fill="url(#accentGrad)">
+        <animate attributeName="x" dur="7s" values="895;910;895" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <g clip-path="url(#panelClip)">
+    <g filter="url(#softGlow)">
+      <text x="129" y="146" class="mono" font-size="4.6" fill="#9BDCF6" opacity="0.75" xml:space="preserve">
+        &lt;animate attributeName=&quot;opacity&quot; dur=&quot;5s&quot; values=&quot;0.42;0.82;0.42&quot; repeatCount=&quot;indefinite&quot;/&gt;
+      </text>
+    </g>
+
+    <g id="asciiPortrait" opacity="0.92">
+      <animate attributeName="opacity" dur="6s" values="0.6;0.98;0.64;0.92" repeatCount="indefinite"/>
+      <text x="118" y="116" class="mono" font-size="4.65" fill="#E2F7FF" xml:space="preserve">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;***&gt;&gt;&gt;&lt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="121" class="mono" font-size="4.65" fill="#D7F0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&lt;&lt;&lt;)][[]&lt;&gt;&gt;**&gt;&gt;&gt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="126" class="mono" font-size="4.65" fill="#DBF5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*+*]]]]))&gt;*&gt;)%#}##&lt;&lt;[]&gt;**&lt;&lt;&gt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="131" class="mono" font-size="4.65" fill="#C9EDFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;**&gt;*&gt;@]&gt;+&gt;&gt;&gt;&gt;]]&lt;&gt;=+&lt;&lt;]%[&gt;+]]}}]&lt;&gt;&gt;&lt;&gt;&lt;&lt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="136" class="mono" font-size="4.65" fill="#C8EEFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+}#])[]&lt;&lt;[%)&gt;&gt;&gt;&gt;&lt;]]&gt;+==*)&gt;)&gt;)}&gt;=&lt;[))&lt;**&lt;]&lt;*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="141" class="mono" font-size="4.65" fill="#D0F4FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*+&gt;&gt;[}]&lt;&gt;]&gt;&gt;***+))&lt;&lt;&gt;&lt;][}#}&lt;++}}:=&lt;[)[&lt;[}[[&gt;)}[&lt;*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="146" class="mono" font-size="4.65" fill="#D3F2FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+++]}#)&gt;&lt;)&gt;*&lt;&lt;&lt;&gt;[))&lt;+=++*&gt;&gt;++++&lt;&gt;&lt;[@@)])=+&lt;&gt;&lt;&lt;&gt;))%#&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="151" class="mono" font-size="4.65" fill="#D2EFFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*)@=*&lt;]&lt;&lt;&lt;&lt;&gt;&lt;&lt;&gt;&lt;&gt;&lt;&gt;&gt;)#@%&lt;&gt;+=&lt;@@%)*&gt;&gt;++&lt;][%#&gt;+&lt;&lt;&gt;++&lt;)*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="156" class="mono" font-size="4.65" fill="#C7EEFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+++)[)}&lt;)&lt;&lt;)&gt;&lt;&lt;&gt;)&lt;*&gt;*&gt;))&gt;]}@%}]&gt;=-&gt;]]&gt;&gt;&gt;**++&lt;#&lt;&gt;[&lt;)#[)&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="161" class="mono" font-size="4.65" fill="#C5F4FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*@+&lt;#]&gt;)&lt;&gt;&gt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;}[[}]&lt;*&gt;*&gt;&lt;*&lt;}@}*+&lt;]&lt;&lt;&lt;&lt;&lt;*&gt;&gt;%&lt;]&gt;**)&lt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="166" class="mono" font-size="4.65" fill="#D6F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+&gt;&lt;}&gt;)*&gt;*&gt;&lt;&lt;&lt;&lt;&lt;)&lt;}])*===+&lt;]]))])&gt;==&lt;%%)*&gt;&lt;&lt;&lt;&lt;&lt;&lt;*)[**&lt;&lt;&gt;&lt;@[&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="171" class="mono" font-size="4.65" fill="#D2F4FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*&lt;@@*}&lt;]&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;%@%[&lt;**&gt;&lt;&lt;]}]][)*+*&lt;[)&gt;&lt;)&lt;&lt;&lt;&gt;&lt;)&lt;)&gt;&lt;)*[&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="176" class="mono" font-size="4.65" fill="#C8EEFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;*:@} &gt;[&lt;*&lt;)&lt;&lt;&gt;&gt;*+=++++-=+&gt;)&lt;**))+&lt;)&lt;&lt;&lt;&lt;&gt;&gt;*]&lt;&gt;&lt;&lt;)&lt;&lt;&lt;&gt;&gt;]}&lt;&lt;&gt;&lt;*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="181" class="mono" font-size="4.65" fill="#CBEFFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;[+#@}+)[+&gt;&gt;&lt;&lt;&lt;&lt;&lt;)%@%[)&lt;&lt;&lt;]@@[[)*&gt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;+==&gt;*&gt;&lt;&gt;&gt;&lt;&gt;**[%*=[%&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="186" class="mono" font-size="4.65" fill="#D5F5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;]-%=)=*&lt;&lt;]&lt;&lt;&lt;&gt;)[})&lt;+=*&lt;&lt;)&gt;==**)]&lt;&gt;+==--  &gt;)&lt;}&gt;+****&lt;]&gt;&lt;+)%[&gt;*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="191" class="mono" font-size="4.65" fill="#C7F0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;-+@+&lt;]*&lt;&lt;&gt;&lt;)&lt;&lt;&gt;*+*&lt;}@%@[&lt;&lt;&lt;&lt;&lt;&gt;*+=::  +)[&lt;[%]])]}]))]}%)&gt;**&gt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="196" class="mono" font-size="4.65" fill="#D1F3FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*@]:)]&lt;*&lt;&lt;&lt;&lt;&lt;&gt;*+++==&lt;)&gt;****+:     #@@}}#@[[}&lt;**+&lt;##&gt;*&gt;]&gt;&lt;[%]&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="201" class="mono" font-size="4.65" fill="#C7F0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*)&lt;&lt;&gt;*)]&lt;&lt;&lt;&lt;&gt;)&lt;]@@%[&lt;*=:     +=&lt;*[@@@@@@#%%@}[)-  -+**&gt;&lt;[)&gt;)&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="206" class="mono" font-size="4.65" fill="#D2F3FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;**@&lt;=&lt;]&gt;&lt;)*&gt;&gt;&lt;&gt;*+*])==@&lt;@}@)@@%@@@%}[]][[]][][[[*  &lt;])+)*&lt;)&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="211" class="mono" font-size="4.65" fill="#C7F1FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+}=]&gt;)&lt;&lt;[#]&lt;&gt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;[)*@@@@@@@@#[)][#@@@@@@@@@@@@- +]*&lt;&lt;+*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="216" class="mono" font-size="4.65" fill="#D4F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*&lt;@)&gt;*&lt;&gt;&gt;&gt;&lt;]]&lt;&lt;&lt;+:   )@)&lt;]}}#}}}%@@@@@@@@} : :+@@@* )+-}#++&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="221" class="mono" font-size="4.65" fill="#CBF2FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;-@@=+*&gt;&lt;&gt;&lt;&gt;&gt;&gt;*=-+)%@@@@@@@#%@@@@@@@@@)      &gt; +@@@  &gt;[@[}++&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="226" class="mono" font-size="4.65" fill="#D8F6FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*+@+&lt;[*&gt;&lt;&lt;&lt;++--@@@@@@@@@@@@@@@@@@]     @@@@@@@[)@@% -@@ @}=&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="231" class="mono" font-size="4.65" fill="#CFF1FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;*}@)@&lt;&lt;&lt;&lt;*&gt;}@@@    ::-&lt;=+@@@#[)=  *]==   ]   :[}%@] )@#@[=&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="236" class="mono" font-size="4.65" fill="#DBF8FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;]+=+%[&gt;*&gt;+&lt;@@     =-       +&lt;[}}+*&lt; @@) #@  [%@%}@@  -@@&gt;-&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="241" class="mono" font-size="4.65" fill="#D5F4FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&lt;*&gt;&gt;+-:+[&gt;-@@@@%:&lt; #&gt;+&lt;:]@@@@&lt;*#@+ [%)-[@@@@@}%@@*%+[[-*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="246" class="mono" font-size="4.65" fill="#D1F2FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;**@@  [@[*   @   @**%&gt;)&lt;%@%}##@@@@@@@@@@@@[]}@@-:*[@&gt;+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="251" class="mono" font-size="4.65" fill="#CFF5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+*][ }@@@@+  =@) ]@%%]]#@%)[@@@@@#[#}@@#}]&lt;*%@=&lt;@[%-+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="256" class="mono" font-size="4.65" fill="#D8F8FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+]@@ :@)}@@@@@@@@@@@#&lt;&gt;[@%)+: )@@@#%%@##}[})#%- &gt;[@&lt;*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="261" class="mono" font-size="4.65" fill="#CCF0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;* *@%-+@#%@@@@@%%%@@+ +#@@@@@@} @@@@%##}#[]))@]@@@]:*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="266" class="mono" font-size="4.65" fill="#D9F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+ )@@]%][%#%%%#%@@@*@@@@@@:    @@@@####]]}[)@] :  *&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="271" class="mono" font-size="4.65" fill="#D2F3FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;==@@=*])#%%%%@@@@@+  #}  }@]@@@@@@@@@%}][%##&lt;:=*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="276" class="mono" font-size="4.65" fill="#D9F5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;* +%&lt;=&lt;*)}}@#%@@@@@@] :-)         +@@@#[}}##&lt;=&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="281" class="mono" font-size="4.65" fill="#CFF2FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+ @@}[}&lt;)[}%%@@@@)   #@@@@@@[]]    @@%[}}#}=+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="286" class="mono" font-size="4.65" fill="#D3F4FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;- [@#}}&lt;][}#@@   @%+:     +: [@@ =})&lt;])&gt;* *&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="291" class="mono" font-size="4.65" fill="#CDF1FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+   -%%]))%@      =&gt;@@@@@@@%@@@@[)]&gt;][))@-*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="296" class="mono" font-size="4.65" fill="#D4F5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+*]#@##@ &gt;@@@}*][#@@-  +#[])}}]}[&gt;+}@-+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="301" class="mono" font-size="4.65" fill="#CEF0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*-   [[@@:#@@@@)     %@@@%[@@@@&lt;+]*]#  :&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="306" class="mono" font-size="4.65" fill="#D8F4FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;* @  *]]#@@@[%@@@@@@@@@@@@@}*++@-=)@@@   *&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="311" class="mono" font-size="4.65" fill="#CFF5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*: @@ +  **}@@@@@@@@@@@#[#} +  @@:*[#=[@@:  &gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="316" class="mono" font-size="4.65" fill="#D6F5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*=@:@@@ *@}   )@@[&lt;@}=)]&gt;    +&lt;&lt;@@+*}@&lt;=&lt;@@@   &gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="321" class="mono" font-size="4.65" fill="#C7F0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*-}# @@@@  )@@&lt;             ]#}))@}&gt;}@@--}&gt;-@@@  :&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="326" class="mono" font-size="4.65" fill="#D4F3FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;= #%&gt;  @%@@@ :#@@@@&lt;-   :==*&gt;]}&lt;&lt;)]+]}})+ =&gt;#@@@@&gt;  =&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="331" class="mono" font-size="4.65" fill="#D7F8FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+:]@@%&lt;*  @@]@@@  #@@@@@@@@[])&lt;**&gt;))][[])[]= +:@@@@@@   +&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="336" class="mono" font-size="4.65" fill="#D0F0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*++&lt;@@&gt;=**&gt;*: *@#%@@%  @@@%@@@%@@@%##[[)[#}[[[*  :@@}%@@@@*&lt;)==+*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="341" class="mono" font-size="4.65" fill="#DCEEFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*=)%[#}-=*&gt;&lt;&lt;&lt;&gt;* &gt;@@=@@@}  )@@###%#}#%%][]}}[)[[&lt; +@@@}%#@@[} )@@#)=-=+*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="346" class="mono" font-size="4.65" fill="#C8F0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+-&lt;@#*=&gt;)*)))&lt;&lt;&lt;&gt;)=  @@ #@@@@   }%}]))[)])))]]&gt;&lt;[[* *@@@@@]%@@+::-=)#@@#}&lt;-:-+*&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="351" class="mono" font-size="4.65" fill="#DCF8FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*: =@@&gt;+&gt;&gt;&gt;&lt;&gt;&lt;&lt;))))&lt;&lt;)&gt;  @@&gt;)%@@@@]  }@%&lt;&lt;))&gt;*&lt;}[+&gt;#@* )@@@[%@}@@ *]]*--+&gt;)[@@@%)**+-=&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="356" class="mono" font-size="4.65" fill="#D5F5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*-  )@@&lt;-+&lt;&lt;&gt;&lt;))&lt;&gt;&gt;&gt;&lt;&gt;&lt;&lt;)&gt;*  @@})#@@@-@@  ]@#[}[}@@% :&gt;}}: @@%@@@@@= )]+]@]+*&gt;&gt;++&gt;[#}}#%}*+&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="361" class="mono" font-size="4.65" fill="#CDF0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;=   *@@@[:=&gt;&lt;))&lt;&gt;&lt;&gt;&lt;&lt;&lt;)&lt;))))&lt;&lt;&gt;: [@[]@&gt;  @@@@  [][@@@@@ %@]][ @@#[@@@  @&gt;*]&lt;&gt;})*&gt;&gt;&lt;&lt;&gt;*&gt;]}]}+&lt;@=*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="366" class="mono" font-size="4.65" fill="#D1F1FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*-   &gt;%@@@@]-:+&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;)&lt;&lt;&gt;&lt;&lt;&lt;&gt;= :@@[   @@@@@  :*+]%@@*@@@%#-@@@@[    *@[]+=*#&lt;***&lt;)))*)}%@:&gt;@=*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="371" class="mono" font-size="4.65" fill="#DADFFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*:  }@@@@@@@]=-+&gt;&lt;&lt;)&lt;&lt;))&lt;&lt;&lt;&lt;&lt;))&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;* &gt;@% -  @@* @] -+*=]@[][#%%=*@}]@@@ +=&gt;@*&lt;}&gt;&lt;%)&lt;)&lt;&gt;&gt;)[&lt;&gt;)@*:}%=&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="376" class="mono" font-size="4.65" fill="#D8F5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*-  -@@@#]&lt;)]]*:-=&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;))&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;)&lt;&lt;&lt;+ @@ )[   [@@@@% ))[##}}[[}* %@@@@@ +*-[@+*&lt;+]#&lt;&lt;&gt;&gt;&gt;*&gt;[]*]}:*@*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="381" class="mono" font-size="4.65" fill="#C8F0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+--*@@@@}&gt;+*&gt;&gt;*+=+*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+ +:::*]    @@@ :-+}}}[}[) *@@@@  &gt;=*=+##+&gt;&gt;*[[)&lt;&gt;&lt;]&lt;&gt;}]&gt;[=&gt;]]*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="386" class="mono" font-size="4.65" fill="#D7F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;+}@@#)*-++=***&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&gt;+@@@  &gt;[}   )@@*:=}%%}[+ @@@  : @)&lt;+&gt;+@}*&gt;*&lt;[)]&lt;*)[**[])=&gt;&gt;%+&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="391" class="mono" font-size="4.65" fill="#CFF4FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;@)=-=++*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;))&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)&lt;&lt;* *@@@  ))&lt;-  )@@# *%%] @@}  =# @@+-**&gt;@)+&gt;*]&lt;&lt;[&lt;&lt;}[**}}=&gt;&gt;#)&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="396" class="mono" font-size="4.65" fill="#D5F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;%&gt;+&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;)&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;))&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;))*  @@@]   &lt;)=   @@]*[&lt;-@@&gt; :[] @@] =++)@&gt;*&gt;])+&gt;)&lt;]}&lt;=&lt;@=*&lt;)&lt;*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="401" class="mono" font-size="4.65" fill="#D6F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*[&lt;&gt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)]&lt;&gt;&lt;))&lt;&lt;&lt;&lt;)&lt;)&lt;))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&gt;&gt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;* =]@@@}   +@)= =@@&lt;=@@@@==)  @@@:)*=+##**&gt;[&lt;*&gt;&lt;]}}*=#[+&lt;)[+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="406" class="mono" font-size="4.65" fill="#CDF0FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+%+&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;])&gt;&lt;))&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&gt;))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;+ )}@@@@@-   *[} *% @@@@[*&gt; @)}@]][:+*%)+&gt;[]&gt;&gt;&gt;&lt;[%)=&gt;%=&lt;]}*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="411" class="mono" font-size="4.65" fill="#D7F6FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;#*))&lt;&lt;&lt;&lt;&lt;))&lt;))&lt;&lt;]]&lt;*))))&lt;&lt;)&gt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;- [[@@@@@ @     =&gt;     :&lt;] @=@@@:+&lt; +)#&gt;+&gt;))&lt;&gt;&gt;&lt;[#==}*&gt;[})*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="416" class="mono" font-size="4.65" fill="#CFF5FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;[&gt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&lt;])*))&lt;&lt;&lt;))))&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&gt;))&lt;&lt;&lt;&lt;&lt;&lt;)&lt;)&lt;: #}@@@@* @}@&gt; =)]))))&gt;** @:}%@:=@  *}}**]&lt;&lt;)&lt;&gt;)#)=)&gt;*][[*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="421" class="mono" font-size="4.65" fill="#D8F8FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;))&gt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;)))*))&lt;)&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;))&lt;&gt;)&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)&gt;  ##@@@@) @@@@  )#&gt;*&gt;))&lt; @:#)@[ @@ +)#&lt;*&lt;&lt;&gt;])&lt;&lt;)}+&lt;&lt;&gt;&lt;&lt;]&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="426" class="mono" font-size="4.65" fill="#D2F3FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;+=-=*&lt;&lt;&lt;&lt;)&lt;&lt;)&lt;))&lt;&lt;)))*&lt;)))))))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;)&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;)&lt;* =@]@%@@] &lt;}@@  *}[+=*+ @:%]@% @@ =*][&lt;&lt;)*&gt;))&lt;)&lt;&lt;&gt;&lt;&gt;&gt;&lt;[]*&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="431" class="mono" font-size="4.65" fill="#D5F8FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;]&gt;)@@&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;])*))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;)&lt;&gt;&lt;&lt;&lt;&lt;&lt;))* )@[@@@@] =@@@: :#@@#&lt; @-%)}[&gt;@@* *&gt;[]&gt;]&lt;*&lt;)&lt;]*}&gt;&gt;&lt;&lt;)][&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="436" class="mono" font-size="4.65" fill="#D0F1FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;@%*)**&lt;&lt;&lt;&lt;&lt;&lt;)&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;))*))&lt;)))))&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;+ %}#@%@@=&gt;=@@@@  *))* @&lt;@}[&lt;}@@) &gt;&gt;][&gt;)&lt;&gt;&lt;&lt;)]&gt;+]&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="441" class="mono" font-size="4.65" fill="#D7F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*&gt;:%*&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;))&lt;&lt;&lt;&gt;)&gt;&gt;))))&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;))&lt;&lt;)&lt;&lt;&lt;&lt;))&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;= @}@@@@[ &lt;)@@@==**[)--@@%]&gt;[@@} &lt;*&lt;]&lt;&lt;)&gt;&gt;&gt;&lt;]&gt;)%*&lt;&gt;**&gt;)&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="446" class="mono" font-size="4.65" fill="#C8EEFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*[}&lt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;))&lt;)&lt;)&lt;&gt;&gt;))&lt;&lt;&lt;)))&lt;&lt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;)&lt;&lt;)- @)@@@@= =+@@&lt; ))=#*: @@[&lt;]@@@ *&lt;*)]))&gt;&lt;])&lt;&lt;*)*&gt;)[)&lt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="451" class="mono" font-size="4.65" fill="#D1F3FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;}*&gt;&gt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)))&gt;&gt;&lt;&lt;&lt;&gt;&gt;)])&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&gt;&gt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  @)@@@@@@)&gt;@@ @&lt;=&lt;}*= @@]@@@% &gt;&lt;*&lt;]&gt;)&lt;&gt;&gt;&gt;&gt;&gt;&lt;)&gt;&lt;))[#]&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="456" class="mono" font-size="4.65" fill="#D0F2FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;)*+&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;))&lt;))&gt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;)&lt;&gt; &gt;}[@@%@@@))+:*+&lt;:@=]: @} @@@ &gt;&gt;&lt;&gt;))]&gt;&lt;&lt;&lt;&lt;&gt;)}&gt;&lt;&gt;&gt;*&gt;[)&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="461" class="mono" font-size="4.65" fill="#D4F3FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;]}}&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;)))))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+ @&gt;@@%[- +@] +=@&lt;@=&gt;#  @+@@# }=&lt;*))]&lt;&lt;&lt;))))&lt;&gt;&lt;&lt;&lt;&lt;&gt;&lt;)&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="466" class="mono" font-size="4.65" fill="#CFF1FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)))&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;)&lt;&lt;- #}@}- &lt;@@# +-)@@=&gt;&gt;) )&lt;%@@-#=)&lt;&gt;))&lt;&lt;)&lt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;)&lt;&gt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="471" class="mono" font-size="4.65" fill="#DAF9FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;]&gt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&lt;&lt;&gt;&lt;&lt;&lt;)&lt;&lt;))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;))&lt;&lt;)&lt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;)&gt;: }@@+-@@@@ =++[&lt;)*&gt;&lt;= [@@@-+*&lt;&lt;&gt;&lt;)]*&gt;&lt;&lt;&gt;)&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="476" class="mono" font-size="4.65" fill="#D6F6FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*&gt;&lt;&lt;&lt;&gt;&lt;))))))&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;)&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)))&lt;&lt;&lt;&lt;)&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;* }#%=*@@@@ -*+)@&lt;+&gt;)&gt;- }@@+:&lt;)&lt;&lt;&gt;&gt;[&gt;&lt;&lt;&lt;&gt;]&gt;&lt;&lt;&lt;[})*&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="481" class="mono" font-size="4.65" fill="#D0F2FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;*&gt;)%)&gt;&gt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;))]))&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;))&lt;&lt;&lt;&lt;&lt;)&lt;- @)&gt;)@@@@:=&gt;=@[)&gt;&gt;&lt;&gt;*:&lt;@@ :&gt;&lt;)&lt;&lt;&gt;]&lt;&gt;&lt;&lt;&gt;]&gt;&lt;&lt;&gt;*&lt;##&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="486" class="mono" font-size="4.65" fill="#CDEEFF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;@]&gt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;)))])&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;))&lt;)&lt;&lt;&lt;&lt;&lt;))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;))&lt;&lt;&lt;&lt;&lt;&lt;&gt;:=%))@@@@&gt; -)*]}&lt;)&gt;&gt;&gt;- @@- &lt;&lt;)&lt;&gt;&gt;&lt;&lt;&gt;&lt;&lt;&gt;]&lt;&lt;&lt;&lt;&lt;&gt;+)}&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="491" class="mono" font-size="4.65" fill="#D8F9FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;]*+*&lt;&lt;&lt;&gt;&gt;&lt;&lt;&lt;)&lt;)])&lt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;)&lt;&lt;&lt;&lt;))*-@#+}@@@@ @]+&lt;]}*&gt;&gt;[* +@[ &gt;))&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&gt;)&gt;&lt;&lt;&lt;&lt;&lt;&lt;*&lt;]&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="496" class="mono" font-size="4.65" fill="#D4F6FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;*[)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;))&gt;&gt;***&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;)&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;)&lt;&lt;&lt;&lt;&lt;&gt; =@)+@@@@ -*+&lt;})**&lt;)&gt;- @@ &gt;&lt;)&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;))&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="501" class="mono" font-size="4.65" fill="#CFF1FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;%&lt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;)&lt;&gt;&gt;&gt;&lt;&lt;][]&lt;)&lt;&lt;))]])&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;*-)} }@@@  &lt;*)]&lt;&gt;&gt;[&gt;&lt;&gt;:[@ +))&lt;&gt;&lt;&lt;&lt;&lt;&gt;))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="506" class="mono" font-size="4.65" fill="#D4F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&gt;&lt;))&lt;&lt;)&lt;&gt;&gt;&lt;)))&lt;&lt;&lt;)&lt;)))))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;)&lt;&lt;&lt;)&lt;==@&gt;+@@}+:*&lt;&gt;&lt;&gt;*%&gt;&gt;&lt;&lt;-*@)=&lt;&lt;)&lt;&lt;))&gt;&gt;&lt;)&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="511" class="mono" font-size="4.65" fill="#D8F7FF" xml:space="preserve"> &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;))&lt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;))]&lt;*&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;:&gt;%:[@@&lt;  **&gt;&gt;@&lt;*&lt;&lt;&lt;*-%@-&lt;&lt;)&lt;&lt;&lt;&lt;&lt;&lt;))&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;))])&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+      <text x="118" y="516" class="mono" font-size="4.65" fill="#D5F4FF" xml:space="preserve">                                                                                                   *</text>
+    </g>
+
+    <g id="asciiGlow" opacity="0.5" filter="url(#softGlow)">
+      <animate attributeName="opacity" dur="4.4s" values="0.2;0.72;0.25" repeatCount="indefinite"/>
+      <rect x="120" y="122" width="404" height="355" rx="16" fill="none" stroke="url(#accentGrad)" stroke-opacity="0.32" stroke-width="1.1"/>
+    </g>
+
+    <g id="terminal">
+      <g>
+        <rect x="610" y="113" width="430" height="312" rx="18" fill="#0A1224" stroke="#22D3EE" stroke-opacity="0.32"/>
+        <rect x="610" y="113" width="430" height="22" rx="18" fill="#0E1A33" opacity="0.95"/>
+        <circle cx="630" cy="124" r="3.2" fill="#10B981"/>
+        <circle cx="644" cy="124" r="3.2" fill="#22D3EE"/>
+        <circle cx="658" cy="124" r="3.2" fill="#7C3AED"/>
+
+        <text x="632" y="165" class="lcd" font-size="20" fill="#F8FAFC" font-weight="700">Hi 👋</text>
+        <text x="632" y="195" class="lcd" font-size="22" fill="#F8FAFC" font-weight="700">Uday Chandra Andra</text>
+
+        <g font-size="13" class="lcd">
+          <text x="632" y="235" fill="#F8FAFC" font-weight="700">Name</text><text x="760" y="235" fill="#E2E8F0">: Andra Udaychandra</text>
+          <text x="632" y="260" fill="#F8FAFC" font-weight="700">Qualification</text><text x="760" y="260" fill="#E2E8F0">: B.Tech (IT)</text>
+          <text x="632" y="285" fill="#F8FAFC" font-weight="700">Passed Out</text><text x="760" y="285" fill="#E2E8F0">: 2025</text>
+          <text x="632" y="310" fill="#F8FAFC" font-weight="700">Email</text><text x="760" y="310" fill="#67E8F9">: udayandra003@gmail.com</text>
+          <text x="632" y="335" fill="#F8FAFC" font-weight="700">GitHub</text><text x="760" y="335" fill="#67E8F9">: github.com/uday-andra</text>
+          <text x="632" y="360" fill="#F8FAFC" font-weight="700">LinkedIn</text><text x="760" y="360" fill="#67E8F9">: linkedin.com/in/andra-udaychandra</text>
+          <text x="632" y="385" fill="#F8FAFC" font-weight="700">Portfolio</text><text x="760" y="385" fill="#67E8F9">: andra-udaychandra-portfolio.netlify.app</text>
+        </g>
+
+        <g transform="translate(632 410)">
+          <text x="0" y="0" class="lcd" font-size="13" fill="#F8FAFC" font-weight="700">Skills</text>
+          <g transform="translate(0 14)">
+            <rect x="0" y="0" width="46" height="20" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.55"/>
+            <text x="23" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#E2F7FF">Java</text>
+            <rect x="54" y="0" width="80" height="20" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.55"/>
+            <text x="94" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#E2F7FF">Spring Boot</text>
+            <rect x="142" y="0" width="54" height="20" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.55"/>
+            <text x="169" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#E2F7FF">React</text>
+            <rect x="204" y="0" width="71" height="20" rx="10" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.55"/>
+            <text x="239" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#F3E8FF">JavaScript</text>
+            <rect x="283" y="0" width="66" height="20" rx="10" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.55"/>
+            <text x="316" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#F3E8FF">TypeScript</text>
+            <rect x="357" y="0" width="57" height="20" rx="10" fill="#0F172A" stroke="#10B981" stroke-opacity="0.55"/>
+            <text x="386" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#D1FAE5">Node.js</text>
+          </g>
+          <g transform="translate(0 40)">
+            <rect x="0" y="0" width="52" height="20" rx="10" fill="#0F172A" stroke="#10B981" stroke-opacity="0.55"/>
+            <text x="26" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#D1FAE5">Docker</text>
+            <rect x="60" y="0" width="44" height="20" rx="10" fill="#0F172A" stroke="#10B981" stroke-opacity="0.55"/>
+            <text x="82" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#D1FAE5">AWS</text>
+            <rect x="112" y="0" width="48" height="20" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.55"/>
+            <text x="136" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#E2F7FF">Linux</text>
+            <rect x="168" y="0" width="42" height="20" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.55"/>
+            <text x="189" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#E2F7FF">Git</text>
+            <rect x="218" y="0" width="52" height="20" rx="10" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.55"/>
+            <text x="244" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#F3E8FF">GitHub</text>
+            <rect x="278" y="0" width="58" height="20" rx="10" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.55"/>
+            <text x="307" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#F3E8FF">MySQL</text>
+            <rect x="344" y="0" width="58" height="20" rx="10" fill="#0F172A" stroke="#10B981" stroke-opacity="0.55"/>
+            <text x="373" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#D1FAE5">MongoDB</text>
+            <rect x="410" y="0" width="68" height="20" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.55"/>
+            <text x="444" y="13" text-anchor="middle" class="lcd" font-size="10" fill="#E2F7FF">Tailwind</text>
+          </g>
+        </g>
+
+        <g id="cursor" transform="translate(900 159)">
+          <rect x="0" y="0" width="10" height="16" rx="2" fill="#22D3EE">
+            <animate attributeName="opacity" dur="0.9s" values="1;0.15;1" repeatCount="indefinite"/>
+          </rect>
+        </g>
+      </g>
+    </g>
+
+    <g id="bottomIcons" transform="translate(620 438)">
+      <g>
+        <rect x="0" y="0" width="54" height="22" rx="11" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.4"/>
+        <text x="27" y="14" text-anchor="middle" class="lcd" font-size="11" fill="#E2F7FF">GitHub</text>
+      </g>
+      <g transform="translate(64 0)">
+        <rect x="0" y="0" width="62" height="22" rx="11" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4"/>
+        <text x="31" y="14" text-anchor="middle" class="lcd" font-size="11" fill="#F3E8FF">LinkedIn</text>
+      </g>
+      <g transform="translate(140 0)">
+        <rect x="0" y="0" width="46" height="22" rx="11" fill="#0F172A" stroke="#10B981" stroke-opacity="0.4"/>
+        <text x="23" y="14" text-anchor="middle" class="lcd" font-size="11" fill="#D1FAE5">Email</text>
+      </g>
+      <g transform="translate(200 0)">
+        <rect x="0" y="0" width="64" height="22" rx="11" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.4"/>
+        <text x="32" y="14" text-anchor="middle" class="lcd" font-size="11" fill="#E2F7FF">Portfolio</text>
+      </g>
+    </g>
+
+    <g opacity="0.32" filter="url(#glassBlur)">
+      <ellipse cx="950" cy="220" rx="180" ry="82" fill="#7C3AED" opacity="0.22">
+        <animate attributeName="cy" dur="14s" values="220;245;220" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="730" cy="390" rx="240" ry="70" fill="#22D3EE" opacity="0.18">
+        <animate attributeName="cx" dur="12s" values="730;760;730" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <g opacity="0.6" filter="url(#softGlow)">
+      <rect x="82" y="78" width="1020" height="452" rx="28" fill="none" stroke="url(#accentGrad)" stroke-width="1.2" stroke-opacity="0.55"/>
+      <animate attributeName="stroke-opacity" dur="4.8s" values="0.35;0.75;0.35" repeatCount="indefinite"/>
+    </g>
+
+    <g opacity="0.75">
+      <rect x="82" y="78" width="1020" height="452" rx="28" fill="none" stroke="url(#accentGrad)" stroke-width="1.3" stroke-opacity="0.26" stroke-dasharray="6 10">
+        <animate attributeName="stroke-dashoffset" dur="7.5s" values="0;-160" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <g opacity="0.32" fill="#F8FAFC">
+    <circle cx="100" cy="100" r="1.8"><animate attributeName="cy" dur="5.6s" values="100;110;100" repeatCount="indefinite"/></circle>
+    <circle cx="170" cy="155" r="1.3"><animate attributeName="opacity" dur="6.4s" values="0.1;0.8;0.1" repeatCount="indefinite"/></circle>
+    <circle cx="270" cy="145" r="1.4"><animate attributeName="cx" dur="8.2s" values="270;290;270" repeatCount="indefinite"/></circle>
+    <circle cx="360" cy="180" r="1.2"><animate attributeName="cy" dur="4.8s" values="180;195;180" repeatCount="indefinite"/></circle>
+    <circle cx="920" cy="180" r="1.5"><animate attributeName="opacity" dur="5.1s" values="0.2;0.9;0.2" repeatCount="indefinite"/></circle>
+    <circle cx="1015" cy="230" r="1.3"><animate attributeName="cy" dur="7.3s" values="230;215;230" repeatCount="indefinite"/></circle>
+    <circle cx="1070" cy="150" r="1.2"><animate attributeName="opacity" dur="5.8s" values="0.4;1;0.4" repeatCount="indefinite"/></circle>
+    <circle cx="825" cy="395" r="1.4"><animate attributeName="cx" dur="7.8s" values="825;845;825" repeatCount="indefinite"/></circle>
+    <circle cx="980" cy="470" r="1.2"><animate attributeName="cy" dur="6.6s" values="470;455;470" repeatCount="indefinite"/></circle>
+    <circle cx="1060" cy="510" r="1.8"><animate attributeName="opacity" dur="4.9s" values="0.1;0.75;0.1" repeatCount="indefinite"/></circle>
+  </g>
+
+  <g opacity="0.33">
+    <rect width="1180" height="610" fill="url(#scanlines)"/>
+    <animate attributeName="opacity" dur="9s" values="0.18;0.36;0.18" repeatCount="indefinite"/>
+  </g>
+
+  <g opacity="0.16">
+    <rect x="0" y="0" width="1180" height="610" fill="url(#accentGrad)" opacity="0.14">
+      <animate attributeName="opacity" dur="10s" values="0.06;0.18;0.06" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
