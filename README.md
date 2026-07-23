@@ -15,8 +15,6 @@
 <h1 align="center">
 ANDRA UDAYCHANDRA
 
----
-
 ## <img src="https://img.icons8.com/fluency/48/user-male-circle.png" width="32"/> About Me
 
 <table>
@@ -163,7 +161,7 @@ Visit Portfolio
 
 <div align="center">
 
-### 🧰 Languages and Tools  
+### 🧰 Languages and Tools
 
 <p>
   <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white" alt="HTML5"/>
@@ -199,7 +197,7 @@ Visit Portfolio
 
 --
 
-# <img src="https://img.icons8.com/fluency/48/combo-chart.png" width="34"/> Contribution Graph
+## <img src="https://img.icons8.com/fluency/48/combo-chart.png" width="34"/> Contribution Graph
 
 <div align="center">
 
@@ -223,8 +221,6 @@ Visit Portfolio
 
 <div align="center">
 
-### 🐍 Contribution Activity
-
 <img src="https://raw.githubusercontent.com/uday-andra/uday-andra/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only" width="100%"/>
 
 <img src="https://raw.githubusercontent.com/uday-andra/uday-andra/output/github-contribution-grid-snake.svg#gh-light-mode-only" width="100%"/>
@@ -241,7 +237,7 @@ Visit Portfolio
 
 --
 
-## <img src="https://img.icons8.com/fluency/48/handshake.png" width="34"/> Connect With Me
+### <img src="https://img.icons8.com/fluency/48/handshake.png" width="34"/> Connect With Me
 
 <div align="center">
 
