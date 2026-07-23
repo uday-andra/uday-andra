@@ -1,7 +1,3 @@
-<!-- ========================================================= -->
-<!--           PREMIUM CYBERPUNK GITHUB PROFILE README         -->
-<!-- ========================================================= -->
-
 <div align="center">
 
 <img src="./assets/dark.svg#gh-dark-mode-only" width="100%" alt="Dark Hero"/>
@@ -141,8 +137,6 @@ Visit Portfolio
 
 </table>
 
---
-
 ## ⚡ Professional Highlights
 
 <div align="center">
@@ -156,7 +150,6 @@ Visit Portfolio
 
 </div>
 
---
 ## <img src="https://img.icons8.com/fluency/48/source-code.png" width="34"/> Languages & Tools
 
 <div align="center">
@@ -185,8 +178,6 @@ Visit Portfolio
   <img src="https://img.shields.io/badge/Wireshark-1679A7?logo=wireshark&logoColor=white" alt="Wireshark"/>
 </p>
 
---
-
 ## <img src="https://img.icons8.com/fluency/48/fire-element.png" width="34"/> GitHub Streak
 
 <div align="center">
@@ -195,7 +186,6 @@ Visit Portfolio
 
 </div>
 
---
 
 ## <img src="https://img.icons8.com/fluency/48/combo-chart.png" width="34"/> Contribution Graph
 
@@ -205,7 +195,6 @@ Visit Portfolio
 
 </div>
 
---
 
 <div align="center">
 
@@ -214,8 +203,6 @@ Visit Portfolio
 > **Build Clean • Build Secure • Build Scalable • Never Stop Learning**
 
 </div>
-
---
 
 ## <img src="https://img.icons8.com/fluency/48/snake.png" width="34"/> Contribution Snake
 
@@ -234,8 +221,6 @@ Visit Portfolio
 > **Every contribution represents continuous learning, consistency, and passion for software development.**
 
 </div>
-
---
 
 ### <img src="https://img.icons8.com/fluency/48/handshake.png" width="34"/> Connect With Me
 
@@ -293,8 +278,6 @@ I'm always interested in collaborating on
 
 </div>
 
---
-
 # <img src="https://img.icons8.com/fluency/48/visible.png" width="34"/> Profile Visitors
 
 <div align="center">
@@ -302,8 +285,6 @@ I'm always interested in collaborating on
 <img src="https://komarev.com/ghpvc/?username=uday-andra&style=for-the-badge&color=7C3AED"/>
 
 </div>
-
---
 
 <div align="center">
 
@@ -326,7 +307,3 @@ I'm always interested in collaborating on
 <img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:0F172A,35:1E3A8A,65:7C3AED,100:22D3EE&section=footer"/>
 
 </div>
-
-<!-- ========================================================= -->
-<!--                 END OF README                             -->
-<!-- ========================================================= -->
