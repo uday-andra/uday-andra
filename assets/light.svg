@@ -213,16 +213,16 @@
         <circle cx="658" cy="124" r="3.2" fill="#7C3AED"/>
 
         <text x="632" y="165" class="lcd" font-size="20" fill="#F8FAFC" font-weight="700">Hi 👋</text>
-        <text x="632" y="195" class="lcd" font-size="22" fill="#F8FAFC" font-weight="700">Uday Chandra Andra</text>
+        <text x="632" y="195" class="lcd" font-size="22" fill="#F8FAFC" font-weight="700">ANDRA UDAYCHANDRA</text>
 
         <g font-size="13" class="lcd">
           <text x="632" y="235" fill="#F8FAFC" font-weight="700">Name</text><text x="760" y="235" fill="#E2E8F0">: Andra Udaychandra</text>
           <text x="632" y="260" fill="#F8FAFC" font-weight="700">Qualification</text><text x="760" y="260" fill="#E2E8F0">: B.Tech (IT)</text>
           <text x="632" y="285" fill="#F8FAFC" font-weight="700">Passed Out</text><text x="760" y="285" fill="#E2E8F0">: 2025</text>
           <text x="632" y="310" fill="#F8FAFC" font-weight="700">Email</text><text x="760" y="310" fill="#67E8F9">: udayandra003@gmail.com</text>
-          <text x="632" y="335" fill="#F8FAFC" font-weight="700">GitHub</text><text x="760" y="335" fill="#67E8F9">: github.com/uday-andra</text>
+          <text x="632" y="335" fill="#F8FAFC" font-weight="700">GitHub</text><text x="760" y="335" fill="#67E8F9">: 2025</text>
           <text x="632" y="360" fill="#F8FAFC" font-weight="700">LinkedIn</text><text x="760" y="360" fill="#67E8F9">: linkedin.com/in/andra-udaychandra</text>
-          <text x="632" y="385" fill="#F8FAFC" font-weight="700">Portfolio</text><text x="760" y="385" fill="#67E8F9">: andra-udaychandra-portfolio.netlify.app</text>
+          <text x="632" y="385" fill="#F8FAFC" font-weight="700">Passed Out</text><text x="760" y="385" fill="#67E8F9">: andra-udaychandra-portfolio.netlify.app</text>
         </g>
 
         <g transform="translate(632 410)">
@@ -284,7 +284,7 @@
       </g>
       <g transform="translate(200 0)">
         <rect x="0" y="0" width="64" height="22" rx="11" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.4"/>
-        <text x="32" y="14" text-anchor="middle" class="lcd" font-size="11" fill="#E2F7FF">Portfolio</text>
+        <text x="32" y="14" text-anchor="middle" class="lcd" font-size="11" fill="#E2F7FF">Passed Out</text>
       </g>
     </g>
 
