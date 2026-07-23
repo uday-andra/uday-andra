@@ -176,224 +176,69 @@ Visit Portfolio
 </div>
 
 ---
-
 # <img src="https://img.icons8.com/fluency/48/source-code.png" width="34"/> Languages & Tools
 
 <div align="center">
 
-> **Technologies I use to build secure, scalable and production-ready applications.**
-
-</div>
-
-<br>
-
-<table align="center">
-
-<tr>
-
-<td align="center" width="170">
-
-<img src="https://skillicons.dev/icons?i=html" width="60"/>
-
-### HTML5
-
-Semantic • Accessible • SEO
-
-</td>
-
-<td align="center" width="170">
-
-<img src="https://skillicons.dev/icons?i=css" width="60"/>
-
-### CSS3
-
-Responsive • Animations
-
-</td>
-
-<td align="center" width="170">
-
-<img src="https://skillicons.dev/icons?i=js" width="60"/>
-
-### JavaScript
-
-ES6+ • Modern UI
-
-</td>
-
-<td align="center" width="170">
-
-<img src="https://skillicons.dev/icons?i=ts" width="60"/>
-
-### TypeScript
-
-Scalable Applications
-
-</td>
-
-</tr>
-
-<tr>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=java" width="60"/>
-
-### Java
-
-Core • Advanced • OOP
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=spring" width="60"/>
-
-### Spring Boot
-
-REST APIs • Security
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=react" width="60"/>
-
-### React
-
-SPA • Hooks • UI
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=nodejs" width="60"/>
-
-### Node.js
-
-Backend Development
-
-</td>
-
-</tr>
-
-<tr>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=mysql" width="60"/>
-
-### MySQL
-
-Relational Database
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=mongodb" width="60"/>
-
-### MongoDB
-
-NoSQL Database
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=docker" width="60"/>
-
-### Docker
-
-Containers
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=aws" width="60"/>
-
-### AWS
-
-Cloud Computing
-
-</td>
-
-</tr>
-
-<tr>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=git" width="60"/>
-
-### Git
-
-Version Control
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=github" width="60"/>
-
-### GitHub
-
-Open Source
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=linux" width="60"/>
-
-### Linux
-
-Development Environment
-
-</td>
-
-<td align="center">
-
-<img src="https://skillicons.dev/icons?i=tailwind" width="60"/>
-
-### Tailwind CSS
-
-Modern UI Design
-
-</td>
-
-</tr>
-
-</table>
-
----
-
-# <img src="https://img.icons8.com/fluency/48/combo-chart.png" width="34"/> Development Workflow
-
-<div align="center">
-
-```text
-IDE
- │
- ▼
-Planning
- │
- ▼
-Development
- │
- ▼
-Testing
- │
- ▼
-Git Version Control
- │
- ▼
-Deployment
- │
- ▼
-Continuous Improvement
-```
+### 💻 Programming Languages
+
+<p>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+</p>
+
+### 🌐 Frontend
+
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+</p>
+
+### ⚙️ Backend
+
+<p>
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
+  <img src="https://img.shields.io/badge/REST_API-02569B?style=for-the-badge&logo=fastapi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+</p>
+
+### 🗄️ Database
+
+<p>
+  <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
+</p>
+
+### ☁️ Cloud & DevOps
+
+<p>
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</p>
+
+### 🛠️ Tools
+
+<p>
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"/>
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
+  <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
+</p>
+
+### 🔐 Cybersecurity
+
+<p>
+  <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=termux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Burp_Suite-FB542B?style=for-the-badge&logo=burpsuite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Nmap-004A7C?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white"/>
+</p>
 
 </div>
 
