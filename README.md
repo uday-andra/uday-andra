@@ -14,27 +14,10 @@
 
 <h1 align="center">
 ANDRA UDAYCHANDRA
-</h1>
-
-<h3 align="center">
-
-💻 Java Full Stack Developer • 🚀 Software Engineer • 🔐 Cybersecurity Enthusiast
-
-</h3>
-
-<p align="center">
-
-<img src="https://komarev.com/ghpvc/?username=uday-andra&style=for-the-badge&color=7C3AED"/>
-
-<img src="https://img.shields.io/github/followers/uday-andra?style=for-the-badge&logo=github&color=22D3EE"/>
-
-<img src="https://img.shields.io/github/stars/uday-andra?style=for-the-badge&logo=github&color=F59E0B"/>
-
-</p>
 
 ---
 
-# <img src="https://img.icons8.com/fluency/48/user-male-circle.png" width="32"/> About Me
+## <img src="https://img.icons8.com/fluency/48/user-male-circle.png" width="32"/> About Me
 
 <table>
 
@@ -42,7 +25,7 @@ ANDRA UDAYCHANDRA
 
 <td width="58%">
 
-## 👋 Hello
+### 👋 Hello
 
 I'm **Andra Udaychandra**, a passionate **Java Full Stack Developer** focused on building scalable, secure, and high-performance applications.
 
@@ -160,91 +143,53 @@ Visit Portfolio
 
 </table>
 
----
+--
 
-# ⚡ Professional Highlights
+## ⚡ Professional Highlights
 
 <div align="center">
 
 | 🚀 Development | 🔐 Security | ☁️ Cloud | 🎯 Goal |
 |:--------------:|:----------:|:--------:|:-------:|
 | Java Full Stack | Cybersecurity | AWS & Docker | Software Engineer |
-| Spring Boot | Secure Coding | Modern DevOps | Enterprise Applications |
-| React.js | API Security | Linux | Open Source |
+| React.js | Secure Coding | Modern DevOps | Enterprise Applications |
+| Java & SpringBoot | API Security | Linux | Open Source |
 | REST APIs | Authentication | CI/CD | Continuous Learning |
 
 </div>
 
----
-# <img src="https://img.icons8.com/fluency/48/source-code.png" width="34"/> Languages & Tools
+--
+## <img src="https://img.icons8.com/fluency/48/source-code.png" width="34"/> Languages & Tools
 
 <div align="center">
 
-### 💻 Programming Languages
+### 🧰 Languages and Tools  
 
 <p>
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-%231572B6.svg?logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/SpringBoot-%236DB33F.svg?logo=springboot&logoColor=white" alt="Spring Boot"/>
+  <img src="https://img.shields.io/badge/React-%23007ACC.svg?logo=react&logoColor=white" alt="React"/>
+  <img src="https://img.shields.io/badge/MySQL-%2300f.svg?logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/Git-%23F05033.svg?logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/Postman-%23FF6C37.svg?logo=postman&logoColor=white" alt="Postman"/>
+  <img src="https://img.shields.io/badge/VSCode-%23007ACC.svg?logo=visualstudiocode&logoColor=white" alt="VS Code"/>
+  <img src="https://img.shields.io/badge/IntelliJ_IDEA-%23000000.svg?logo=intellijidea&logoColor=white" alt="IntelliJ IDEA"/>
+  <img src="https://img.shields.io/badge/Cybersecurity-%23000000.svg?logo=protonvpn&logoColor=white" alt="Cybersecurity"/>
+  <img src="https://img.shields.io/badge/Kali%20Linux-557C94?logo=kalilinux&logoColor=white" alt="Kali Linux"/>
+  <img src="https://img.shields.io/badge/Termux-000000?logo=termux&logoColor=white" alt="Termux"/>
+  <img src="https://img.shields.io/badge/Burp%20Suite-FB542B?logo=burpsuite&logoColor=white" alt="Burp Suite"/>
+  <img src="https://img.shields.io/badge/Nmap-004A7C?logo=nmap&logoColor=white" alt="Nmap"/>
+  <img src="https://img.shields.io/badge/Wireshark-1679A7?logo=wireshark&logoColor=white" alt="Wireshark"/>
 </p>
 
-### 🌐 Frontend
+--
 
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
-</p>
-
-### ⚙️ Backend
-
-<p>
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
-  <img src="https://img.shields.io/badge/REST_API-02569B?style=for-the-badge&logo=fastapi&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
-</p>
-
-### 🗄️ Database
-
-<p>
-  <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
-</p>
-
-### ☁️ Cloud & DevOps
-
-<p>
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</p>
-
-### 🛠️ Tools
-
-<p>
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"/>
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
-  <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
-</p>
-
-### 🔐 Cybersecurity
-
-<p>
-  <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=termux&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Burp_Suite-FB542B?style=for-the-badge&logo=burpsuite&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Nmap-004A7C?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white"/>
-</p>
-
-</div>
-
----
-
-# <img src="https://img.icons8.com/fluency/48/fire-element.png" width="34"/> GitHub Streak
+## <img src="https://img.icons8.com/fluency/48/fire-element.png" width="34"/> GitHub Streak
 
 <div align="center">
 
@@ -252,7 +197,7 @@ Visit Portfolio
 
 </div>
 
----
+--
 
 # <img src="https://img.icons8.com/fluency/48/combo-chart.png" width="34"/> Contribution Graph
 
@@ -262,7 +207,7 @@ Visit Portfolio
 
 </div>
 
----
+--
 
 <div align="center">
 
@@ -272,11 +217,9 @@ Visit Portfolio
 
 </div>
 
----
+--
 
----
-
-# <img src="https://img.icons8.com/fluency/48/snake.png" width="34"/> Contribution Snake
+## <img src="https://img.icons8.com/fluency/48/snake.png" width="34"/> Contribution Snake
 
 <div align="center">
 
@@ -296,135 +239,9 @@ Visit Portfolio
 
 </div>
 
----
+--
 
-# <img src="https://img.icons8.com/fluency/48/project.png" width="34"/> Featured Projects
-
-<div align="center">
-
-<table>
-
-<tr>
-
-<td width="50%" valign="top">
-
-## 🌐 Portfolio Website
-
-Professional developer portfolio built using React with a modern UI, responsive design, reusable components, animations, and optimized performance.
-
-### ⚡ Tech Stack
-
-React
-
-JavaScript
-
-CSS
-
-Responsive Design
-
-Framer Motion
-
-<a href="https://andra-udaychandra-portfolio.netlify.app/">
-
-<img src="https://img.shields.io/badge/View_Project-7C3AED?style=for-the-badge"/>
-
-</a>
-
-</td>
-
-<td width="50%" valign="top">
-
-## 🏢 K Quality Soft
-
-Enterprise company website featuring premium UI, animations, responsive layouts, modern navigation, and optimized performance.
-
-### ⚡ Tech Stack
-
-React
-
-JavaScript
-
-CSS
-
-Responsive Design
-
-Animation
-
-<a href="https://github.com/uday-andra">
-
-<img src="https://img.shields.io/badge/View_Project-22D3EE?style=for-the-badge"/>
-
-</a>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td width="50%" valign="top">
-
-## ☕
-
-Java Full Stack Projects
-
-Production-ready applications built using Java, Spring Boot, REST APIs, MySQL, authentication, and modern backend architecture.
-
-### ⚡ Tech Stack
-
-Java
-
-Spring Boot
-
-REST API
-
-MySQL
-
-JWT
-
-<a href="https://github.com/uday-andra">
-
-<img src="https://img.shields.io/badge/View_Project-F59E0B?style=for-the-badge"/>
-
-</a>
-
-</td>
-
-<td width="50%" valign="top">
-
-## 🤖 AI Projects
-
-Modern AI applications focused on automation, intelligent workflows, and productivity enhancement using current AI tools and APIs.
-
-### ⚡ Tech Stack
-
-AI
-
-Automation
-
-Prompt Engineering
-
-API Integration
-
-Python
-
-<a href="https://github.com/uday-andra">
-
-<img src="https://img.shields.io/badge/View_Project-10B981?style=for-the-badge"/>
-
-</a>
-
-</td>
-
-</tr>
-
-</table>
-
-</div>
-
----
-
-# <img src="https://img.icons8.com/fluency/48/handshake.png" width="34"/> Connect With Me
+## <img src="https://img.icons8.com/fluency/48/handshake.png" width="34"/> Connect With Me
 
 <div align="center">
 
@@ -480,7 +297,7 @@ I'm always interested in collaborating on
 
 </div>
 
----
+--
 
 # <img src="https://img.icons8.com/fluency/48/visible.png" width="34"/> Profile Visitors
 
@@ -490,7 +307,7 @@ I'm always interested in collaborating on
 
 </div>
 
----
+--
 
 <div align="center">
 
