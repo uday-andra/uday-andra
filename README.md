@@ -178,14 +178,6 @@ Visit Portfolio
   <img src="https://img.shields.io/badge/Wireshark-1679A7?logo=wireshark&logoColor=white" alt="Wireshark"/>
 </p>
 
-## <img src="https://img.icons8.com/fluency/48/fire-element.png" width="34"/> GitHub Streak
-
-<div align="center">
-
-<img width="100%" src="https://streak-stats.demolab.com?user=uday-andra&theme=tokyonight&hide_border=true&border_radius=18&card_width=900"/>
-
-</div>
-
 
 ## <img src="https://img.icons8.com/fluency/48/combo-chart.png" width="34"/> Contribution Graph
 
